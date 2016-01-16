@@ -11,18 +11,18 @@ public class Deck {
 	private Stack<Card> cardList;
 	
 	/*** Construct a new deck ***/
-	public Deck(Player currentPlayer){
+	public Deck(){
 		//set variables
 		deckSize = 10;
 		cardList = new Stack();
 		//add copper
 		for (int i=0;i < 7;i++){
-			Card tempCard = new Card(0,"copper",currentPlayer);
+			Card tempCard = new Card(0,"copper");
 			cardList.push(tempCard);
 		}
 		//add estates
 		for (int i=0;i < 3; i++){
-			Card tempCard = new Card(2,"estate",currentPlayer);
+			Card tempCard = new Card(2,"estate");
 			cardList.push(tempCard);
 		}
 		//call randomizer

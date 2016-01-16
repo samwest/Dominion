@@ -8,14 +8,12 @@ package files;
 public class Card {
 	private int cost;
 	private String desc;
-	private Player owner;
 	
 	
 	/*** Create a new Card Object ***/
-	public Card(int cardCost,String descriptor,Player ownedBy){
+	public Card(int cardCost,String descriptor){
 		cost = cardCost;
 		desc = descriptor;
-		owner = ownedBy;
 	}
 	
 	/*** Get the cost back ***/
