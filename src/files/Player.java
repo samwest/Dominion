@@ -17,5 +17,20 @@ public class Player {
 		
 	}
 	
+	/*** Get this player's deck ***/
+	public Deck getDeck(){
+		return playerDeck;
+	}
+	
+	/*** Get this player's discard ***/
+	public Deck getDiscard(){
+		return playerDiscard;
+	}
+	
+	/*** Get this player's Hand ***/
+	public Hand getHand(){
+		return playerHand;
+	}
+	
 }
 

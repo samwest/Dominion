@@ -26,11 +26,14 @@ public class Deck {
 			cardList.push(tempCard);
 		}
 		//call randomizer
-		
 	}
 	
 	public Card getTop(){
 		return cardList.pop();
+	}
+	
+	public void addCard(Card c){
+		cardList.push(c);
 	}
 	
 }
