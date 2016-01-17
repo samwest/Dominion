@@ -1,5 +1,5 @@
 package files;
-import java.util.Stack;
+import java.util.*;
 
 /*** Used for both the draw deck and discard pile ***/
 /* Implement as a stack?
@@ -28,15 +28,54 @@ public class Deck {
 		//call randomizer
 	}
 	
+	public void printDeck() {
+		Card[] cardArray;
+		int startSize=deckSize;
+		// allocates memory for 10 integers
+        cardArray = new Card[startSize];
+        for (int i = 0; i < startSize;i++) {
+        	cardArray[i]=this.getTop();
+        	System.out.println(cardArray[i].getDesc());
+        }
+        for (int j = startSize-1; j>=0;j--) {
+        	this.addCard(cardArray[j]);
+        }
+	}
+	
+	public void ranomizeDeck(){
+		
+		Collections.shuffle(cardList);
+		/*Card[] cardArray;
+		Card tmpCard;
+
+        // allocates memory for 10 integers
+        cardArray = new Card[deckSize];
+		
+        for (int i = 0; i < deckSize;i++) {
+        	tmpCard <- this.getTop()
+        	cardArray[i]= 
+        }
+		
+		public Vector<Card> cardVector = new Vector<Card>(deckSize);
+		while (!cardList.empty()){
+						
+		}*/
+	}
+	
+	
 	public int getDeckSize(){
 		return deckSize;
 	}
 	
+	
+	
 	public Card getTop(){
+		deckSize--;
 		return cardList.pop();
 	}
 	
 	public void addCard(Card c){
+		deckSize++;
 		cardList.push(c);
 	}
 	
