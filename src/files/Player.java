@@ -11,8 +11,8 @@ public class Player {
 	
 	/*** Create a new player ***/
 	public Player(){
-		playerDeck = new Deck(this);
-		playerDiscard = new Deck(this);
+		playerDeck = new Deck();
+		playerDiscard = new Deck();
 		playerHand = new Hand(playerDeck);
 		
 	}
