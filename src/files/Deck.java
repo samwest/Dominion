@@ -14,18 +14,22 @@ public class Deck {
 	public Deck(){
 		//set variables
 		deckSize = 10;
-		cardList = new Stack();
+		cardList = new Stack<Card>();
 		//add copper
 		for (int i=0;i < 7;i++){
-			Card tempCard = new Card(0,"copper");
+			Card tempCard = new Card(0,"copper",1,false,false,true,false);
 			cardList.push(tempCard);
 		}
 		//add estates
 		for (int i=0;i < 3; i++){
-			Card tempCard = new Card(2,"estate");
+			Card tempCard = new Card(2,"estate",1,false,true,false,false);
 			cardList.push(tempCard);
 		}
 		//call randomizer
+	}
+	
+	public int getDeckSize(){
+		return deckSize;
 	}
 	
 	public Card getTop(){
